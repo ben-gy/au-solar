@@ -1,0 +1,34 @@
+name: Data Pipeline
+
+on:
+  schedule:
+    # Source cadence: the Clean Energy Regulator republishes the SRES postcode
+    # data MONTHLY (currently "as at 31 May 2026"). Monthly cron is therefore
+    # proportional to the source, and is the fastest cadence the factory allows.
+    # Staggered to day 9 at 05:23 UTC so this repo doesn't fire with the others.
+    - cron: '23 5 9 * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['pipeline/**']
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: node pipeline/collect.mjs
+      - run: node pipeline/aggregate.mjs
+      - name: Commit data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/data/
+          git diff --cached --quiet || git commit -m "Update data $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push || (git pull --rebase && git push)
