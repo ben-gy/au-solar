@@ -90,6 +90,17 @@ node pipeline/collect.mjs && node pipeline/aggregate.mjs
 
 This is **systems per 100 homes**, not "% of homes with solar". The numerator counts every system ever installed, including replacements and upgrades; the denominator is a 2021 snapshot. It runs higher than the true share of households with a working system. And the Solar Divide shows a strong association, not proof of cause — income, roof age, climate and state policy all overlap with home ownership.
 
-## License
+## license
 
-MIT
+[GNU Affero General Public License v3.0 or later](./LICENSE), with an attribution
+requirement added under section 7(b) — see
+[ADDITIONAL-TERMS.md](./ADDITIONAL-TERMS.md).
+
+In short: you may run, modify, redistribute and even sell this, but if you
+distribute it — or run a modified version where other people can reach it — you
+have to publish your source under the same licence and keep the attribution. A
+separate commercial licence without those obligations is available on request:
+<hi@ben.gy>.
+
+Third-party components keep their own licences — see
+[THIRD-PARTY-NOTICES.md](./THIRD-PARTY-NOTICES.md).
