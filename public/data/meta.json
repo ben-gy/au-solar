@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-09T06:06:26.847Z",
+  "generated": "2026-09-09T09:57:07.021Z",
   "solarMonths": [
     "2001-04",
     "2001-05",
@@ -303,7 +303,8 @@
     "2026-03",
     "2026-04",
     "2026-05",
-    "2026-06"
+    "2026-06",
+    "2026-07"
   ],
   "battMonths": [
     "2025-07",
@@ -317,7 +318,8 @@
     "2026-03",
     "2026-04",
     "2026-05",
-    "2026-06"
+    "2026-06",
+    "2026-07"
   ],
   "years": [
     2001,
@@ -348,20 +350,20 @@
     2026
   ],
   "solarProvisional": 1,
-  "battProvisional": 2,
-  "latestSolarMonth": "2026-06",
-  "latestCompleteSolarMonth": "2026-05",
-  "latestBattMonth": "2026-06",
+  "battProvisional": 3,
+  "latestSolarMonth": "2026-07",
+  "latestCompleteSolarMonth": "2026-06",
+  "latestBattMonth": "2026-07",
   "latestCompleteBattMonth": "2026-04",
   "national": {
-    "solar": 4469116,
-    "battery": 438319,
-    "kw": 29490369,
-    "kwh": 12392965,
+    "solar": 4501883,
+    "battery": 475531,
+    "kw": 29816806,
+    "kwh": 13408784,
     "dwellings": 9275060,
-    "per100": 48.2,
-    "batPer100": 4.73,
-    "medianPer100": 56.6,
+    "per100": 48.5,
+    "batPer100": 5.13,
+    "medianPer100": 57.1,
     "postcodes": 2815,
     "mappable": 2630
   },
